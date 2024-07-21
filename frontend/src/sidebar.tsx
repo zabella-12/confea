@@ -1,6 +1,5 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { Box, VStack, Link, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, List, ListItem, ListIcon } from '@chakra-ui/react';
-import { color } from 'framer-motion';
 
 export function Sidebar() {
     return (
