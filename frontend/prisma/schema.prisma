@@ -1,0 +1,38 @@
+// schema.prisma
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model ART {
+  id              Int      @id @default(autoincrement())
+  responsavel     String
+  titulo          String
+  empresa         String
+  contratante     String
+  endereco_contr  String
+  cidade_contr    String
+  uf_contr        String
+  cep_contr       String
+  cpf_cnpj_contr  String
+  valor_contr     Float
+  proprietario    String
+  endereco_prop   String
+  cidade_prop     String
+  uf_prop         String
+  cep_prop        String
+  cpf_cnpj_prop   String
+  data_inicio     DateTime
+  data_termino    DateTime
+  custo_obra      Float
+  dimensao_obra   String
+  memorial        String
+  observacoes     String
+  situacao        String
+  acessibilidade  Boolean
+  entidade_classe String
+}
