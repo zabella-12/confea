@@ -1,5 +1,8 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { Box, VStack, Link, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, List, ListItem, ListIcon } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
+
+
 
 export function Sidebar() {
     return (
@@ -151,7 +154,7 @@ export function Sidebar() {
                             <List spacing={2}>
                                 <ListItem>
                                     <ListIcon as={ChevronRightIcon} />
-                                    <Link href="#">Preencher Anotações de Responsabilidade Técnica</Link>
+                                    <Link as={RouterLink} to="/artCad">Preencher Anotações de Responsabilidade Técnica</Link>
                                 </ListItem>
                                 <ListItem>
                                     <ListIcon as={ChevronRightIcon} />

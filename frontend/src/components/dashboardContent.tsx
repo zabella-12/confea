@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Stat, StatLabel, StatNumber, Heading, Table, Tbody, Tr, Td, Card, CardBody, Stack, Divider, CardHeader, CardFooter, Image, ButtonGroup, Button } from '@chakra-ui/react';
+import { Box, SimpleGrid, Stat, StatLabel, StatNumber, Heading, Card, CardBody, Stack, Divider, CardFooter, Image, Button } from '@chakra-ui/react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar, ResponsiveContainer, Text } from 'recharts';
 
 const data = [

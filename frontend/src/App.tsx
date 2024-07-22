@@ -1,23 +1,15 @@
-import { Box, Grid, GridItem } from '@chakra-ui/react';
-import { Sidebar } from './sidebar';
-import { Header } from './header';
-import { DashboardContent } from './dashboardContent';
+// src/pages/index.tsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/index';
+import ArtCad from './pages/artCad';
 
 export function App() {
   return (
-    <Box>
-      <Header />
-      <Grid templateColumns={{ base: '1fr', md: '300px 1fr' }} gap={4}>
-        <GridItem display={{ base: 'none', md: 'block' }}>
-          <Sidebar />
-        </GridItem>
-        <GridItem>
-          <DashboardContent />
-        </GridItem>
-      </Grid>
-    </Box>
-
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/artCad" element={<ArtCad />} />
+      </Routes>
+    </Router>
+  );
 }
-
-
