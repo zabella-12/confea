@@ -1,5 +1,5 @@
-import { Box, SimpleGrid, Stat, StatLabel, StatNumber, Heading, Table, Tbody, Tr, Td } from '@chakra-ui/react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar, ResponsiveContainer } from 'recharts';
+import { Box, SimpleGrid, Stat, StatLabel, StatNumber, Heading, Table, Tbody, Tr, Td, Card, CardBody, Stack, Divider, CardHeader, CardFooter, Image, ButtonGroup, Button } from '@chakra-ui/react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar, ResponsiveContainer, Text } from 'recharts';
 
 const data = [
     { name: 'Jan', total: 12, finalizadas: 8, pendente: 4 },
@@ -12,45 +12,10 @@ export function DashboardContent() {
     return (
         <Box p={4}>
             <Heading size="lg" mb={6}>Dashboard do Profissional</Heading>
-            <Box mb={6}>
-                <Heading size="md" mb={4}>Dados Cadastrais</Heading>
-                <Table variant="striped">
-                    <Tbody>
-                        <Tr>
-                            <Td>Registro Nacional</Td>
-                            <Td>123.456.789-00</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>Tipo de Registro</Td>
-                            <Td>Registro Definitivo de Profissional (Diplomado no País)</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>Situação do Registro</Td>
-                            <Td>Ativo</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>Último ano de pago</Td>
-                            <Td>2024 (1/1)</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>Nome</Td>
-                            <Td>Paulo Luiz</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>Títulos</Td>
-                            <Td>123456 - Engenheiro Civil</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>Atribuição</Td>
-                            <Td>Artigo 7 da Resolução 218 de 29.06.73, do CONFEA</Td>
-                        </Tr>
-                        <Tr>
-                            <Td>E-mail</Td>
-                            <Td>paulo_teste@gmail.com</Td>
-                        </Tr>
-                    </Tbody>
-                </Table>
-            </Box>
+
+
+
+            <Heading size="md" mb={4}>Resumo mês atual</Heading>
             <SimpleGrid columns={{ sm: 1, md: 3 }} spacing={4} mb={6} >
 
                 <Stat border='1px' borderColor='gray.200' p={3}>
@@ -107,6 +72,70 @@ export function DashboardContent() {
                     </ResponsiveContainer>
                 </Box>
             </SimpleGrid>
+
+            <Heading size="md" mb={4}>Principais Notícias</Heading>
+            <SimpleGrid columns={{ sm: 1, md: 3 }} spacing={2} mb={2} mt={4}>
+
+                <Card maxW='sm'>
+                    <CardBody>
+                        <Image
+                            src='https://www.mutua.com.br/wp-content/uploads/2024/04/programadeinclusaoPIM.jpg'
+                            borderRadius='lg'
+                        />
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>Como podem ser utilizados os recursos do benefício</Heading>
+                            <Text>
+                                O Programa de Inclusão da Mútua (PIM) representa uma iniciativa significativa na promoção da igualdade e inclusão social, oferecendo um leque de recursos para apoiar associados e dependentes com deficiência.
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                    <CardFooter>
+                        <Button variant='solid' colorScheme='blue'>
+                            Leia mais
+                        </Button>
+                    </CardFooter>
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
+                        <Image
+                            src='https://www.mutua.com.br/wp-content/uploads/2024/04/tecnoprev.jpg'
+                            borderRadius='lg' />
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>Campanha da Mútua reforça a importância da previdência complementar para um futuro tranquilo</Heading>
+                            <Text>
+                                A campanha lançada pela Mútua no último mês destaca a importância crucial da previdência complementar como um pilar para garantir um futuro tranquilo e financeiramente seguro.
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                    <CardFooter>
+                        <Button variant='solid' colorScheme='blue'>
+                            Leia mais
+                        </Button>
+                    </CardFooter>
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
+                        <Image
+                            src='https://www.mutua.com.br/wp-content/uploads/2024/05/WPPNACIONALMUTUA_CAPADEMATERIA_DESKTOP_POST.png'
+                            borderRadius='lg' />
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>Atendimento da Mútua na palma da sua mão</Heading>
+                            <Text>
+                                A Mútua lança nesta quarta-feira, 15 de maio, seu canal de atendimento pela plataforma de mensagens. Então, anota aí o número do WhatsApp da Mútua e já salve em seus contatos (61) 3348-0222.
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                    <CardFooter>
+                        <Button variant='solid' colorScheme='blue'>
+                            Leia mais
+                        </Button>
+                    </CardFooter>
+                </Card>
+            </SimpleGrid>
         </Box>
+
     );
 }
