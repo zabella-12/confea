@@ -13,7 +13,11 @@ import {
     Link,
     Heading,
     Avatar,
-    AvatarBadge
+    AvatarBadge,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 
@@ -24,9 +28,20 @@ export function Header() {
         <Box bg="#4a89d3" w="100%" p={4} color="white">
             <Flex alignItems="center" justifyContent="space-between">
                 <Flex alignItems="center">
-                    <Avatar>
-                        <AvatarBadge boxSize="1.25em" bg="green.500" />
-                    </Avatar>
+                    <Menu isLazy>
+                        <MenuButton>
+                            <Avatar>
+                                <AvatarBadge boxSize="1.25em" bg="green.500" />
+                            </Avatar>
+                        </MenuButton>
+                        <MenuList bg='grey'>
+
+                            <MenuItem bg='grey'>Configurações</MenuItem>
+                            <MenuItem bg='grey'>Suporte</MenuItem>
+                            <MenuItem bg='grey'>Sair</MenuItem>
+                        </MenuList>
+                    </Menu>
+
                     <Heading size="md" ml={4}>
                         Seja bem vindo Paulo Galvão
                     </Heading>
