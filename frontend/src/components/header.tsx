@@ -30,9 +30,11 @@ export function Header() {
                 <Flex alignItems="center">
                     <Menu isLazy>
                         <MenuButton>
-                            <Avatar>
-                                <AvatarBadge boxSize="1.25em" bg="green.500" />
-                            </Avatar>
+                            <Link href='./dashboardContent'>
+                                <Avatar>
+                                    <AvatarBadge boxSize="1.25em" bg="green.500" />
+                                </Avatar>
+                            </Link>
                         </MenuButton>
                         <MenuList bg='grey'>
 
