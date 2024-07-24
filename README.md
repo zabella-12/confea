@@ -16,5 +16,5 @@ A proposta para o backend, é usando Django com Python, e Postgresql para uma es
 ## Participantes
 
 (Desenvolvedor(a)): Isabella de Sousa Castro <br>
-(Profissional Registrado CREA): Paulo Galvão
+(Profissional Registrado CREA): Paulo Galvão <br>
 (UX/UI): Renato Gonçalves dos Santos
